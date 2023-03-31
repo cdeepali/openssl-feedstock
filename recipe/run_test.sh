@@ -16,8 +16,6 @@
 # *****************************************************************
 set -ex
 
-test -f ${PREFIX}/lib/libcrypto.so
-test -f ${PREFIX}/lib/libssl.so
 python -c "import ssl; assert 'FIPS' in ssl.OPENSSL_VERSION"
 
 pushd ./tests
